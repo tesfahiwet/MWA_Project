@@ -31,16 +31,10 @@ import { PostListComponent } from "./posts/post-list/post-list.component";
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
-<<<<<<< HEAD
     MatExpansionModule,
-<<<<<<< HEAD
-    HttpClientModule
-=======
-    MatPaginationModule
->>>>>>> 147c62a951f383be795fd71bac0c5b4d3f7b86ed
-=======
+    HttpClientModule,
     MatExpansionModule
->>>>>>> 1af67c8a4f9721d65fb00d8c881e14d2793841ad
+
   ],
   providers: [],
   bootstrap: [AppComponent]
