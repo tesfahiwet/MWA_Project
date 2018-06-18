@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
 import { Subscription } from 'rxjs';
 
+
 import { Post } from "../post.model";
 import { PostsService } from "../posts.service";
 
@@ -16,6 +17,12 @@ export class PostListComponent implements OnInit, OnDestroy {
   //   { title: "Third Post", content: "This is the third post's content" }
   // ];
   posts: Post[] = [];
+  // pagination variables
+  totalPosts = 0;
+  postsPerPage = 2;
+  currentPage = 1;
+  pageSizeOptions = [1, 2, 5, 10];
+
   private postsSub: Subscription;
 
   constructor(public postsService: PostsService) {}
@@ -26,6 +33,13 @@ export class PostListComponent implements OnInit, OnDestroy {
       .subscribe((posts: Post[]) => {
         this.posts = posts;
       });
+  }
+
+  onChangedPage(pageData: PageEvent) {
+
+    this.currentPage = pageData.pageIndex + 1;
+    this.postsPerPage = pageData.pageSize;
+
   }
 
   ngOnDestroy() {
