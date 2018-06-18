@@ -8,7 +8,8 @@ import {
   MatCardModule,
   MatButtonModule,
   MatToolbarModule,
-  MatExpansionModule
+  MatExpansionModule,
+  MatPaginationModule
 } from "@angular/material";
 
 import { AppComponent } from "./app.component";
@@ -32,7 +33,11 @@ import { PostListComponent } from "./posts/post-list/post-list.component";
     MatButtonModule,
     MatToolbarModule,
     MatExpansionModule,
+<<<<<<< HEAD
     HttpClientModule
+=======
+    MatPaginationModule
+>>>>>>> 147c62a951f383be795fd71bac0c5b4d3f7b86ed
   ],
   providers: [],
   bootstrap: [AppComponent]
