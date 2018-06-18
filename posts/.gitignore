@@ -60,10 +60,6 @@ build/
 *.meta
 
 
-
-bower_components/
-
-
 # Node and related ecosystem
 # ==========================
 .nodemonignore
