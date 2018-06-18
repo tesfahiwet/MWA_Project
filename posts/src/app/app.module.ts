@@ -7,8 +7,7 @@ import {
   MatCardModule,
   MatButtonModule,
   MatToolbarModule,
-  MatExpansionModule,
-  MatPaginationModule
+  MatExpansionModule
 } from "@angular/material";
 
 import { AppComponent } from "./app.component";
@@ -31,8 +30,7 @@ import { PostListComponent } from "./posts/post-list/post-list.component";
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
-    MatExpansionModule,
-    MatPaginationModule
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
