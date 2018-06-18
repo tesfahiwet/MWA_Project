@@ -8,7 +8,8 @@ import {
   MatCardModule,
   MatButtonModule,
   MatToolbarModule,
-  MatExpansionModule
+  MatExpansionModule,
+  MatProgressSpinnerModule
 } from "@angular/material";
 
 import { AppComponent } from "./app.component";
@@ -17,6 +18,8 @@ import { HeaderComponent } from "./header/header.component";
 import { PostListComponent } from "./posts/post-list/post-list.component";
 import { LoginComponent } from "./auth/login/login.component";
 import { SignupComponent } from "./auth/signup/signup.component";
+import { AppRoutingModule } from "./app-routing.module";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,16 +30,15 @@ import { SignupComponent } from "./auth/signup/signup.component";
   imports: [
     BrowserModule,
     FormsModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
-    MatExpansionModule,
     HttpClientModule,
-    MatExpansionModule
-
-  ],
+    MatProgressSpinnerModule,
+    MatExpansionModule],
   providers: [],
   bootstrap: [AppComponent]
 })
