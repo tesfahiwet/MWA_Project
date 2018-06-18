@@ -45,7 +45,7 @@ export class PostCreateComponent {
     }
     this.isLoading = true;
     if (this.mode === "create") {
-    this.postsService.addPost(form.value.title, form.value.content);
+      this.postsService.addPost(form.value.title, form.value.content);
     } else {
       this.postsService.updatePost(
         this.postId,
