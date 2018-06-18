@@ -33,9 +33,7 @@ import { PostListComponent } from "./posts/post-list/post-list.component";
     MatToolbarModule,
     MatExpansionModule,
     HttpClientModule,
-    MatExpansionModule
-
-  ],
+    MatExpansionModule],
   providers: [],
   bootstrap: [AppComponent]
 })
