@@ -2,10 +2,12 @@ const express = require("express");
 const multer = require("multer");
 
 const Post = require("../models/post");
+const checkAuth = require("../middleware/check-auth");
+
 
 const router = express.Router();
 
-const MIME_TYPE_MAP = {
+const MIME_TYPE_MAP = { 
   "image/png": "png",
   "image/jpeg": "jpg",
   "image/jpg": "jpg"
@@ -71,8 +73,9 @@ router.put(
       _id: req.body.id,
       title: req.body.title,
       content: req.body.content,
-      imagePath: imagePath
-      creator: req.userData.userId
+      imagePath: imagePath,
+      creator: req.userData.userId 
+
     });
 
     Post.updateOne({ _id: req.params.id, creator: req.userData.userId }, post)
@@ -92,7 +95,7 @@ router.put(
 );
 
 router.get("", (req, res, next) => {
-  // + sign for changing string into numeric value
+  
   const pageSize = +req.query.pagesize;
   const currentPage = +req.query.page;
   const postQuery = Post.find();
@@ -143,7 +146,7 @@ router.delete("/:id", checkAuth, (req, res, next) => {
     })
     .catch(error => {
       res.status(500).json({
-        message: "Fetching posts failed!"
+        message: "Deleting posts failed!"
       });
     });
 });
